@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>购物车</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <!--<link rel="stylesheet" href="../view/front/css/header.css"/>-->
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <!--<script type="text/javascript" src="../view/front/js/header.js"></script>-->
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <link rel="stylesheet" href="../view/front/css/flow_order_pay.css"/>
+    <link rel="stylesheet" href="../view/front/css/pay.css"/>
+
+</head>
+<body>
+<!--引入顶部-->
+<?php require(ROOT . 'view/front/top.html');?>
+
+<div id="container">
+    <div id="fop_header">
+        <div id="fh_logo">
+            <a href="index.php"><img src="../view/front/images/logo.png" alt=""/></a>
+            <ul>
+                <li>我的购物车&nbsp;&lt;&lt;&nbsp;</li>
+                <li>填写核对订单信息&nbsp;&lt;&lt;&nbsp;</li>
+                <li><span id="ls_selected">成功提交订单</span></li>
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="pay_msg">
+        <table id="paym_table">
+            <tr>
+                <th colspan="2">订单信息</th>
+            </tr>
+            <tr>
+                <td>订单号:</td>
+                <td><?php echo $oi['order_sn'];?></td>
+            </tr>
+            <tr>
+                <td>收货人:</td>
+                <td><?php echo $oi['reciver'];?></td>
+            </tr>
+            <tr>
+                <td>配送区域:</td>
+                <td><?php echo $oi['zone'];?></td>
+            </tr>
+            <tr>
+                <td>详细地址:</td>
+                <td><?php echo $oi['address'];?></td>
+            </tr>
+            <tr>
+                <td>电话:</td>
+                <td><?php echo $oi['tel']?></td>
+            </tr>
+            <tr>
+                <td>总金额:</td>
+                <td><?php echo $oi['total_price'];?></td>
+            </tr>
+            <tr>
+                <td>支付方式:</td>
+                <td><?php echo $oi['pay_type']? '货到付款' : '在线支付'; ?></td>
+            </tr>
+            <tr>
+                <td>下单时间:</td>
+                <td><?php echo date('Y-m-d H:i:s', $oi['order_time']);?></td>
+            </tr>
+        </table>
+        <button id="btin_pay" style="width:120px;height:40px;font-size: 20px;" >支付</button>
+    </div>
+    <!--引入尾部-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+
+</div>
+<!--end for container-->
+</body>
+</html>

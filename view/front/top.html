@@ -1,0 +1,44 @@
+<!--file: top.html-->
+<!--begin for top-->
+<div id="top">
+    <div id="top_center">
+        <ul class="topull">
+            <li>
+                <span>欢迎光临<b> 便利店</b></span>
+            </li>
+            <li>
+                <b></b>
+                <a href="#">切换城市</a>
+            </li>
+        </ul>
+        <ul class="topulr">
+            <li class="welcome">
+                <span>你好！欢迎光临本店<?php echo isset($_SESSION['name'])? "[<a href=\"#\">" . $_SESSION['name'] . "</a>][<a href=\"logouthandle.php\">退出</a>]": '[<a href="./login.php">登录</a>][<a href="./register.php">注册</a>]';?></span>
+            </li>
+            <li class="order">
+                <a href="#">我的订单</a>
+            </li>
+            <li class="phone">
+                <a href="#">手机版</a>
+            </li>
+            <li id="service" class="dropdown">
+                <span>客户服务</span>
+                <ul>
+                    <li><a href="#">服务1</a></li>
+                    <li><a href="#">服务2</a></li>
+                    <li><a href="#">服务3</a></li>
+                    <li><a href="#">服务4</a></li>
+                    <li><a href="#">服务5</a></li>
+                </ul>
+            </li>
+            <li id="guide" class="dropdown">
+                <span>网站导航</span>
+                <ul>
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航2</a></li>
+                    <li><a href="#">导航3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div> <!--end for top-->

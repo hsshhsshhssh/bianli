@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>购物车</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <!--<link rel="stylesheet" href="../view/front/css/header.css"/>-->
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <!--<script type="text/javascript" src="../view/front/js/header.js"></script>-->
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <link rel="stylesheet" href="../view/front/css/flow_order_pay.css"/>
+    <link rel="stylesheet" href="../view/front/css/flow.css"/>
+    <script type="text/javascript" src="../view/front/js/flow.js"></script>
+
+</head>
+<body>
+<!--引入顶部-->
+<?php require(ROOT . 'view/front/top.html');?>
+
+<div id="container">
+    <div id="fop_header">
+        <div id="fh_logo">
+            <a href="index.php"><img src="../view/front/images/logo.png" alt=""/></a>
+            <ul>
+                <li><span id="ls_selected">我的购物车</span>&nbsp;&lt;&lt;&nbsp;</li>
+                <li>填写核对订单信息&nbsp;&lt;&lt;&nbsp;</li>
+                <li>成功提交订单</li>
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div id="flow_msg">
+        <p>我的购物车</p>
+        <table class="flmt_first">
+            <tr>
+                <th width="40%">商品名称</th>
+                <th width="10%">属性</th>
+                <th width="10%">市场价</th>
+                <th width="10%">本店价</th>
+                <th width="10%">购买数量</th>
+                <th width="10%">小计</th>
+                <th width="10%">操作</th>
+            </tr>
+        </table>
+
+        <?php foreach($shopping_cart as $k => $v) { ?>
+        <table class="flmt_body">
+            <tr>
+                <th width="40%">
+                    <div class="fmtb_div">
+                        <img src="<?php echo '/' . strchr($v['goods_img'], 'bianli');?>" alt="" class="flmtb_img"/>
+                        <a href="goods.php?goods_id=<?php echo $k;?>"><?php echo $v['goods_name']?></a>
+                        <!--<input type="hidden" name="goods_total" class="c_gt" value="<?php echo $v['goods_total'];?>" />-->
+                    </div>
+                </th>
+                <th width="10%"></th>
+                <th width="10%"><font><s>￥<?php echo $v['goods_price']+1.5;?></s></font></th>
+                <th width="10%"><strong>￥<strong class="c_gp"><?php echo $v['goods_price'];?></strong></strong></th>
+                <th width="10%" class="flmtb_num"><img src="../view/front/images/goods_down1.gif" alt="" class="buy_dec" id="dec_one<?php echo $k;?>" /><input type="text" name="buy_total" value="<?php echo $v['num'];?>" id="buy_sel<?php echo $k;?>" /><img src="../view/front/images/goods_up1.gif" alt="" class="buy_inc" id="inc_one<?php echo $k;?>" /></th>
+                <th width="10%" class="total_price"><strong>￥<strong class="c_gtp"><?php echo $v['num']*$v['goods_price']?></strong></strong></th>
+                <th width="10%"><a href="flow.php?type=del&goods_id=<?php echo $k?>">删除</a></th>
+            </tr>
+        </table>
+        <?php } ?>
+
+        <div id="action1_div">
+            <p id="clearall_p"><a href="flow.php?type=clr">清空购物车</a></p>
+            <p id="total_p"><span>总计(不含运费):</span>&nbsp;<strong>￥<strong id="ss_total_price"><?php echo $cart->getTotalPrice();?></strong></strong></p>
+        </div>
+        <div class="clr"></div>
+        <div id="action2_div">
+            <button id="konshop">继续购物</button>
+            <a id="goaccount" href="order.php"><img src="../view/front/images/gocountgif.gif" alt=""/></a>
+        </div>
+    </div>
+
+    <!--引入尾部-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+
+</div>
+<!--end for container-->
+</body>
+</html>

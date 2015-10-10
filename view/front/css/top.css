@@ -1,0 +1,97 @@
+/******file: top.css*******/
+#top {
+    height: 30px;
+    background: #fafafa;
+}
+
+#top_center {
+    width: 1210px;
+    margin: auto;
+}
+
+#top_center .topull li {
+    float: left;
+}
+
+#top_center .topulr li a:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+#top_center .topull li span {
+    font: 14px/30px "微软雅黑";
+}
+
+#top_center .topull li span > b {
+    font: bold 15px/30px "微软雅黑";
+}
+
+#top_center .topull li > b {
+    height: 14px;
+    width: 14px;
+    padding-left: 20px;
+    background: transparent url("../images/chg_city.png") no-repeat scroll 0px -5px;
+}
+
+#top_center .topull li a {
+    font: 14px/30px "微软雅黑";
+}
+
+#top_center .topulr {
+    float: right;
+}
+
+#top_center .topulr li {
+    float: left;
+    font: 14px/30px "微软雅黑";
+    margin-left: 15px;
+}
+
+#top_center .topulr li a:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+#top_center .topulr .dropdown:hover {
+    background: #ffffff;
+}
+
+#top_center .topulr .dropdown {
+    width: 60px;
+}
+
+#top_center .topulr .dropdown span {
+    height: 28px;
+    margin-top: 2px;
+}
+
+#top_center .topulr .dropdown span:hover {
+    box-shadow: 0 0 5px 1px #aaaaaa;
+}
+
+#top_center .topulr .dropdown ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #ffffff;
+    visibility: hidden;
+    box-shadow: 0 0 10px #aaaaaa;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+#top_center .topulr .dropdown ul li {
+    float: none;
+    display: block;
+    height: 22px;
+    width: 60px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#top_center .topulr .dropdown ul li a {
+    font: 14px/22px '微软雅黑';
+    display: block;
+    line-height: 22px;
+    text-align: center;
+}

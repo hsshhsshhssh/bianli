@@ -1,0 +1,148 @@
+/*#flow_header {*/
+    /*height: 125px;*/
+    /*width: 1210px;*/
+    /*margin: auto;*/
+    /*background: #eeeeee;*/
+/*}*/
+
+/*#fh_logo img {*/
+    /*width: 260px;*/
+    /*height: 60px;*/
+    /*margin: 15px 0 10px 0;*/
+    /*float: left;*/
+/*}*/
+
+/*#fh_logo>ul {*/
+    /*margin-top: 20px;*/
+    /*float: right;*/
+    /*margin-right: 105px;*/
+/*}*/
+
+/*#fh_logo>ul>li {*/
+    /*float: left;*/
+    /*font: 20px/40px '微软雅黑';*/
+/*}*/
+
+/*#ls_selected {*/
+    /*background-color: #eeeeee;*/
+/*}*/
+/*****************/
+#flow_msg {
+    width: 1210px;
+    margin: auto;
+    /*background: #eeeeee;*/
+}
+
+#flow_msg>p {
+    font: 20px/40px "微软雅黑";
+    margin: 10px 0 0 105px;
+}
+
+#flow_msg>table {
+    margin: 0 105px;
+    width: 1000px;
+}
+
+.flmt_first {
+    background: #eeeeee;
+    height: 40px;
+    font: 16px/40px "微软雅黑";
+}
+
+.flmt_first th{
+    text-align: center;
+}
+
+.flmt_body{
+    background: rgb(255,253,238);
+    border-bottom: 1px solid #e1e1e1;
+}
+
+
+.flmt_body th{
+    text-align: center;
+}
+
+.flmt_body {
+    width: 10%;
+}
+
+.flmtb_img {
+    width: 70px;
+    height: 70px;
+    margin: 15px 20px;
+    float: left;
+}
+
+.fmtb_div>a {
+    float: left;
+    font: 12px/40px "微软雅黑";
+    margin-top: 15px;
+    width: 120px;
+}
+
+.flmt_body strong,.flmt_body font, .flmt_body a {
+    font-size: 14px;
+}
+
+.total_price {
+    color: #E4393C;
+}
+
+
+.flmtb_num * {
+    float: left;
+}
+
+.flmtb_num .buy_dec {
+    margin-left: 15px;
+}
+
+
+.flmt_body input {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.flmtb_num img {
+    margin-top: 3px;
+}
+
+#action1_div {
+    width: 1000px;
+    margin: auto;
+    background: #eeeeee;
+    margin-top: 20px;
+}
+
+#clearall_p {
+    float: left;
+    font: 18px/40px "微软雅黑";
+}
+
+#total_p {
+    float: right;
+    font: 18px/40px "微软雅黑";
+}
+
+#total_p strong {
+    color: #E4393C;
+}
+
+#action2_div {
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#konshop {
+    float: left;
+    width: 120px;
+    height: 40px;
+    font: bold 20px "微软雅黑";
+}
+
+#goaccount {
+    float: right;
+}

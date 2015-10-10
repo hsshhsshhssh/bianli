@@ -1,0 +1,70 @@
+<!--file: header.html -->
+<!--begin for header-->
+<div id="header">
+    <div id="header_logo">
+        <div id="h_logo"><img src="../view/front/images/logo.png" alt=""/></div>
+        <div id="h_search">
+            <form action="#">
+                <input type="text" name="search"/>
+                <input type="submit" value="搜索"/>
+            </form>
+            <span>热门搜索:&nbsp;<a href="#">热门1</a>&nbsp;<a href="#">热门2</a></span>
+        </div>
+        <div id="h_member" class="memcar">
+            <b></b>
+            <a href="#">会员中心</a>
+
+            <div id="h_member_div"></div>
+        </div>
+        <div id="h_shopcar" class="memcar">
+            <b></b>
+            <a href="flow.php">购物车</a>
+
+            <div id="h_shopcar_div">
+                <!--<div class="hsd_item">-->
+                    <!--<div class="hsdi_img"><img src="../view/front/images/fdd_img.jpg" alt=""/></div>-->
+                    <!--<div class="hsdi_desc">-->
+                        <!--<p>商品名称</p>-->
+                        <!--<div>-->
+                            <!--<img src="../view/front/images/goods_down1.gif" alt="" class="buy_dec" />-->
+                            <!--<input type="text" name="buy_total"/>-->
+                            <!--<img src="../view/front/images/goods_up1.gif" alt="" class="buy_inc"/>-->
+                            <!--<span>商品单价<strong>￥<span>10</span></strong></span>-->
+                            <!--<span>商品总价<strong>￥<span>10</span></strong></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div id="header_cate">
+        <div id="cate_all">
+            <a href="cate.php?cate_id=1">全部商品分类</a>
+
+            <div id="cate_all_div">
+                <?php foreach($catelist as $v) {?>
+                <div class="cate_item">
+                    <span><b></b><a href="<?php echo 'cate.php?cate_id=' . $v['cate_id']?>"><?php echo $v['cate_name'];?></a></span>
+
+                    <div class="cate_item_detail">
+                        <ul>
+                            <?php foreach($v['child'] as $vc) {?>
+                            <li><?php echo $vc['cate_name'];?></li>
+                            <?php }?>
+                        </ul>
+                    </div>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+        <ul id="cate_enum">
+            <li><a href="index.php">首页</a></li>
+            <li><a href="cate.php?cate_id=2">饮料</a></li>
+            <li><a href="cate.php?cate_id=5">零食</a></li>
+            <li><a href="message.php">积分</a></li>
+            <li><a href="message.php">留言</a></li>
+        </ul>
+        <div id="cate_special"><b>货到付款,满10包邮</b><span>&nbsp;30-60分钟送货上楼&nbsp;</span></div>
+    </div>
+</div>
+<!--end for header-->

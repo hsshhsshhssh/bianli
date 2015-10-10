@@ -1,0 +1,35 @@
+/**file: login.css***/
+.msg_table {
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin-left: 400px;
+}
+
+.msg_table tr {
+    height: 40px;
+}
+
+.msg_table th {
+    text-align: center;
+    font-size: 18px;
+}
+
+.msg_table .td_title {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.msg_table td {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.msg_table .td_button {
+    text-align: center;
+}
+
+.msg_table span {
+    color: #c0c0c0;
+    margin-left: 10px;
+}

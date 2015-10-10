@@ -1,0 +1,155 @@
+create table bl_user (
+id int unsigned not null primary key auto_increment,
+username char(20) not null default '',
+password char(32) not null default '',
+email char(50) not null default '',
+logintime int(10) not null default 0,
+logip char(20) not null default '',
+is_active tinyint unsigned not null default 0
+)engine=myisam charset=utf8;
+
+create table bl_cate (
+cate_id int unsigned not null primary key auto_increment,
+cate_name char(50) not null default '',
+parent_id int unsigned not null default 0,
+is_delete tinyint unsigned not null default 0,
+cate_desc varchar(200) not null default ''
+)engine=myisam charset=utf8;
+
+create table bl_goods (
+goods_id int unsigned not null primary key auto_increment,
+goods_name varchar(50) not null default '',
+cate_id int unsigned not null default 1,
+goods_sn char(10) not  null default '',
+goods_time int(10) unsigned not null default 0,
+goods_price char(10) not null default '0',
+price_unit char(10) not null default 'cn',
+goods_weight char(10) not null default '0',
+weight_unit char(10) not null default '',
+goods_total int unsigned not null default  10,
+is_best tinyint unsigned not null default 0,
+is_new tinyint unsigned not null default 0,
+is_hot tinyint unsigned not null default 0,
+is_delete tinyint unsigned not null default 0,
+on_sale tinyint unsigned not null default 0,
+goods_key char(30) not null default 0,
+goods_img varchar(100) not null default '',
+goods_desc varchar(100) not null default '',
+goods_details text,
+sale_total int unsigned not null default 100,
+seller_note varchar(100) not null default '',
+cate_id_temp int unsigned not null default 10000
+)engine=myisam charset=utf8;
+
+
+create table bl_order_info (
+order_id int unsigned not null primary key auto_increment,
+order_sn char(15) not null default '',
+reciver char(20) not null default '',
+user_id int not null default 0,
+tel char(20) not null default'',
+zone varchar(30) not null  default '',
+address varchar(30)  not null default '',
+zipcode char(6) not null default '',
+order_time int(10) not null default 0,
+pay_type tinyint not null default 0,
+total_price char(10) not null default '0',
+is_pay tinyint unsigned  not null default 0
+)engine=myisam charset=utf8;
+
+create table bl_order_goods (
+id int unsigned not null primary key auto_increment,
+order_id int unsigned not null default 0,
+order_sn char(15) not null default '',
+goods_id int unsigned not null default 0,
+buy_num int unsigned not null default 0,
+subtotal char(10) not null default '0',
+user_id int unsigned not null default 0
+)engine=myisam charset=utf8;
+
+// 仿购快的cate表
+insert into bl_cate (cate_id,cate_name,parent_id) value
+(1,'全部商品分类',0),
+(2,'水、碳酸、茶果、功能饮',1),
+(3,'牛奶、豆奶、低温乳',1),
+(4,'啤酒、洋酒、红酒、中酒',1),
+(5,'休闲零食、雪糕、冲饮',1),
+(6,'方便面、八宝粥、糕点',1),
+(7,'粮油、调味、其他食品',1),
+(8,'手帕纸、抽纸、卷纸、湿纸',1),
+(9,'卫生纸、护垫、女性护理',1),
+(10,'牙膏、牙刷、口腔护理',1),
+(11,'洗发、护发、沐浴、洗面',1),
+(12,'洗衣、清洁、消毒、杀虫',1),
+(13,'毛巾衣袜、计生、其他用品',1),
+(14,'纯净水',2);
+
+insert into bl_cate (cate_name,parent_id) value 
+('饮用水',2),
+('碳酸饮料',2),
+('茶、果汁',2),
+('功能型饮料',2),
+('咖啡、奶茶类',2),
+('其他',2),
+('牛奶',3),
+('豆奶',3),
+('低温奶',3),
+('乳制品',3),
+('洋酒',4),
+('啤酒',4),
+('中酒',4),
+('糖果',5),
+('果仁',5),
+('蜜饯',5),
+('膨化食品',5),
+('果冻布丁',5),
+('风味小食',5),
+('饼干',5),
+('冲饮类',5),
+('槟榔',5),
+('雪糕',5),
+('巧克力',5),
+('糕点',6),
+('方便面',6),
+('八宝粥',6),
+('包装大米',7),
+('食用油',7),
+('煮食粉面',7),
+('调味品',7),
+('罐头类',7),
+('腌制酱品',7),
+('腌菜',7),
+('卷纸',8),
+('面巾纸',8),
+('湿纸巾',8),
+('抽纸',8),
+('卫生巾',9),
+('牙膏',10),
+('牙刷',10),
+('洗发水',11),
+('沐浴露',11),
+('香皂',11),
+('洗面奶',11),
+('护发素',11),
+('啫喱水',11),
+('防护霜',11),
+('洗衣机',12),
+('洗衣粉',12),
+('洗衣液',12),
+('洗洁精',12),
+('杀虫剂',12),
+('蚊香',12),
+('毛巾',13),
+('袜子',13),
+('柔顺剂',13),
+('计生用品',13),
+('棉签',13),
+('消毒水',13),
+('牙签',13),
+('芳香剂',13),
+('花露水',13),
+('垃圾袋',13);
+
+insert into bl_user (username,password,is_active) value
+('admin', md5('admin'), 1);
+

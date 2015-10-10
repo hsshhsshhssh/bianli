@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>便利店 管理中心 - 添加栏目 </title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../view/admin/styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="../view/admin/styles/main.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="../view/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/admin/js/cateedit.js"></script>
+</head>
+<body>
+
+<h1>
+    <span class="action-span"><a href="catelist.php">栏目列表</a></span>
+    <span class="action-span1"><a href="#">便利店 管理中心</a> </span><span id="search_id" class="action-span1"> - 编辑栏目 </span>
+
+    <div style="clear:both"></div>
+</h1>
+
+<div class="main-div">
+    <span style="color:#E4393C;">当前编辑的栏目<br/>栏目名称: <?php echo $cateinfo['cate_name'];?><br/>父级栏目: <?php echo $cateinfo['parent_name'];?><br/>栏目简介: <?php echo $cateinfo['cate_desc'];?></span>
+    <table width="100%" id="general-table">
+        <tr>
+            <td class="label">分类名称:</td>
+            <td>
+                <input type='text' name='cate_name' maxlength="20" value="<?php echo $cateinfo['cate_name']; ?>"
+                       size='27'/> <font color="red">*</font>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">上级分类:</td>
+            <td>
+                <select name="parent_id">
+                    <?php foreach($catelist as $v) { ?>
+                    <option
+                    <?php if($v['cate_id']==$cateinfo['parent_id']) echo 'selected=\'selected\''; else echo ''; ?>
+                    value="<?php echo $v['cate_id']; ?>">
+                    <?php echo str_repeat('&nbsp;&nbsp;',$v['lev']),$v['cate_name']; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">栏目简介:</td>
+            <td>
+                <textarea name='cate_desc' rows="6" cols="48"><?php echo $cateinfo['cate_desc']; ?></textarea>
+            </td>
+        </tr>
+    </table>
+    <div class="button-div">
+        <input type="submit" value=" 确定 "/>
+        <input type="reset" value=" 重置 "/>
+    </div>
+    <input type="hidden" name="cate_id" value="<?php echo $cateinfo['cate_id'];?>"/>
+</div>
+
+<div id="footer" style="color:#E4393C">
+    移动栏目时 子栏目也一起移动
+</div>
+
+</body>
+</html>

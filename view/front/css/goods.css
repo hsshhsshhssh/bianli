@@ -1,0 +1,225 @@
+/*****file: goods.css***********/
+
+/*********goods的上部分************/
+#gs_up {
+    width: 100%;
+    height: 460px;
+    margin-top: 10px;
+}
+
+/****goods上部分 图片部分********/
+#gsu_picture {
+    float: left;
+    width: 402px;
+}
+
+#gsup_big {
+    border: 1px solid #eeeeee;
+    height: 400px;
+}
+
+/*放大镜效果不能设置图片的大小*/
+/*#gsup_big img {*/
+    /*width: 400px;*/
+    /*height: 400px;*/
+/*}*/
+
+#gsup_small {
+    width: 400px;
+    height: 56px;
+    margin-top: 15px;
+}
+
+#gsup_small .gsups_prevnext {
+
+}
+
+#gsup_small .gsups_prev {
+    float: left;
+    width: 20px;
+    height: 56px;
+    margin-right: 3px;
+    text-align: left;
+}
+#gsup_small .gsups_next{
+    float: right;
+    width: 20px;
+    height: 56px;
+    text-align: right;
+}
+
+#gsup_small_div {
+    width: 350px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#gsup_small_div ul {
+    display: block;
+    float: left;
+    position: absolute;
+    left:0px;
+    height: 100%;
+    width: 700px;
+}
+
+#gsup_small_div ul li {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 1px 5px;
+    border: 1px solid #999999;
+    cursor: pointer;
+}
+
+#gsup_small_div ul li img {
+    width:50px;
+    height: 50px;
+}
+
+
+/*****goods上部分 简答描述********/
+#gsu_simdesc {
+    float: left;
+    margin-left: 20px;
+    height:100%;
+    width: 788px;
+}
+
+#gsus_name {
+    height: 37px;
+    border-bottom: 1px dotted #dddddd;
+}
+
+#gsus_name strong {
+    font: bold 20px/37px "微软雅黑";
+    text-align: left;
+}
+
+#gsus_info>ul {
+    border-bottom: 1px dotted #dddddd;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+#gsus_info>ul>li {
+    display: block;
+    height: 35px;
+    height: 100%;
+    font: 14px/35px "微软雅黑";
+}
+
+#gsus_info>ul>li>img {
+    display: inline;
+    margin-right: 10px;
+}
+
+.gsusi_dprice>span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E4393C;
+}
+
+#gsusb_set {
+    margin-top: 30px;
+    height: 30px;
+}
+
+#gsusb_set>* {
+    float: left;
+    margin-right: 10px;
+    font: 14px/30px "微软雅黑";
+}
+
+#gsusb_set>img {
+    width:15px;
+    height: 15px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+#gsusb_set>input {
+    width: 25px;
+    height: 25px;
+}
+
+#gsusb_set>strong {
+    font: bold 16px/30px "微软雅黑";
+    margin-left: 0px !important;
+    color: #E4393C;
+}
+
+#gsusb_action {
+    margin-top: 30px;
+}
+
+#gsusb_action a {
+    float: left;
+}
+
+#gsusb_action img {
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+
+/*****goods 下部分*******/
+#gs_down {
+    margin-top: 30px;
+    width: 100%;
+    border-top: 1px solid #fafafa;
+}
+
+/*****goods 下部分 左边 推荐 历史等******/
+#gsd_rec {
+    width: 210px;
+    float: left;
+
+}
+/****在file: rechos.css***/
+
+/*****goods 下部分 右边 详细描述******/
+#gsd_fulldesc {
+    margin-left: 10px;
+    float: left;
+    width: 990px;
+}
+
+#gsdf_title {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+#gsdf_title ul {
+    width: 100%;
+    height: 39px;
+    border: 1px solid #aaaaaa;
+    background: #f1f1f1;
+}
+
+#gsdf_title ul li {
+    display: block;
+    float: left;
+    height: 37px;
+    width: 120px;
+    border-right: 1px solid #aaaaaa;
+    font: 16px/37px "微软雅黑";
+    text-align: center;
+    border-top: 0px solid #E4393C;
+}
+
+#gsdf_body {
+    margin-top: 10px;
+    width: 988px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
+
+.gsdfb_div {
+    width: 100%;
+    display: none;
+}
+

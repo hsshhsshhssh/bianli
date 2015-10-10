@@ -1,0 +1,308 @@
+/**********file:header.css***************/
+/**********************主要部分****************************************/
+#container {
+    width: 1210px;
+    margin: auto;
+}
+
+/**************************头部***************************************************/
+#header {
+    height: 125px;
+    /*background: #eeeeee;*/
+}
+
+/*************************************logo栏****************************************************/
+#header_logo {
+    width: 100%;
+    height: 85px;
+    border: 1px solid #ffffff;
+}
+
+#header_logo > div {
+    float: left;
+}
+
+#h_logo {
+    width: 330px;
+    height: 60px;
+    margin: 15px 0 10px 0;
+}
+
+#h_search {
+    margin-top: 20px;
+}
+
+#h_search form input[name=search] {
+    width: 406px;
+    height: 30px;
+    line-height: 30px;
+    font: 20px/30px "微软雅黑";
+    border: 3px solid #E4393C;
+}
+
+#h_search form input[type=submit] {
+    background: #E4393C;
+    color: #ffffff;
+    width: 78px;
+    height: 30px;
+    font: 18px/30px "微软雅黑";
+    border: 0px;
+    cursor: pointer;
+}
+
+#h_search span {
+    position: relative;
+    top: 8px;
+    font-size: 12px;
+    color: #999999;
+}
+
+#h_search span a {
+    font-size: 12px;
+    color: #999999;
+}
+
+#h_search span a:hover {
+    text-decoration: underline;
+    color: #E4393C;
+}
+
+#h_member {
+    width: 100px;
+    height: 30px;
+    background: #fafafa;
+    border-radius: 4px;
+    position: relative;
+    top: 25px;
+    left: 120px;
+    box-shadow: 0 0 7px 1px #dddddd;
+}
+
+#h_member > b {
+    display: block;
+    float: left;
+    height: 30px;
+    width: 25px;
+    background: transparent url("../images/complex1.png") no-repeat scroll -120px -23px;
+
+}
+
+#h_member a {
+    text-align: center;
+    font: 16px/30px '微软雅黑';
+}
+
+#h_member_div {
+    width: 300px;
+    height: 200px;
+    background: #ffffff;
+    visibility: hidden;
+    position: relative;
+    left: -200px;
+    top: -1px;
+    box-shadow: 0 0 5px #aaaaaa;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+/****购物车****/
+#h_shopcar {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font: 16px/30px '微软雅黑';
+    background: #fafafa;
+    border-radius: 4px;
+    position: relative;
+    top: 25px;
+    left: 150px;
+    box-shadow: 0 0 7px 1px #dddddd;
+}
+
+#h_shopcar > b {
+    display: block;
+    float: left;
+    height: 30px;
+    width: 25px;
+    margin-left: 10px;
+    background: transparent url("../images/complex1.png") no-repeat scroll -120px -83px;
+
+}
+
+#h_shopcar a {
+    text-align: center;
+    font: 16px/30px '微软雅黑';
+}
+
+#h_shopcar_div {
+    width: 300px;
+    height: 200px;
+    background: #ffffff;
+    visibility: hidden;
+    position: relative;
+    left: -200px;
+    top: -1px;
+    box-shadow: 0 0 5px #aaaaaa;
+    border-radius: 10px;
+    z-index: 100;
+    overflow: auto;
+}
+/*购物车内容*/
+/*.hsd_item {*/
+    /*border: 1px solid #1f1f1f;*/
+    /*width: 100%;*/
+    /*height:100px;*/
+/*}*/
+
+/*.hsdi_img {*/
+    /*float: left;*/
+    /*width: 30%;*/
+    /*height: 100px;*/
+/*}*/
+
+/*.hsdi_img img {*/
+    /*width: 70px;*/
+    /*height: 70px;*/
+    /*margin: 15px 15px;*/
+    /*border: 1px #1f1f1f;*/
+/*}*/
+
+/*.hsdi_desc>p{*/
+
+/*}*/
+
+/*.hsdi_desc>div>input, .hsdi_desc>div>img {*/
+    /*float:left*/
+/*}*/
+
+/*.hsdi_desc input[name=buy_total] {*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+/*}*/
+
+
+
+/*************************************栏目****************************************************/
+#header_cate {
+    height: 40px;
+    background: #E4393C;
+}
+
+#cate_all {
+    float: left;
+    width: 210px;
+}
+
+#cate_all>a {
+    color: #ffffff;
+    display: block;
+    width:210px;
+    height: 40px;
+    padding-left: 20px;
+    font: bold 14px/40px "微软雅黑";
+    text-align: left;
+}
+
+#cate_all>a:hover {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+#cate_all_div {
+    width: 203px;
+    height: 403px;
+    background: #fafafa;
+    visibility: hidden;
+    position: relative;
+    border: 2px solid #E4393C;
+    border-top: none;
+    padding: 3px 3px 3px 0;
+    z-index: 99;
+}
+
+#cate_all_div .cate_item {
+    width: 200px;
+    height: 30px;
+    border-top: 1px solid #ffffff;
+}
+
+#cate_all_div .cate_item span b {
+    display: block;
+    float: left;
+    width: 10px;
+    height: 28px;
+    background: transparent url("../images/complex1.png") no-repeat scroll -130px 10px;
+}
+
+#cate_all_div .cate_item span a {
+    float: left;
+    text-align: left;
+    margin-left: 10px;
+    width: 180px;
+    font: 14px/30px "微软雅黑";
+    color: #000000;
+}
+
+#cate_all_div .cate_item span a:hover {
+    font-size: 15px;
+    font-weight: bold;
+    color: #E4393C;
+    background: #ffffff;
+    text-decoration: underline;
+}
+
+#cate_all_div .cate_item .cate_item_detail {
+    width: 477px;
+    height: 408px;
+    padding: 0 4px 0 8px;
+    box-shadow: 2px 2px 10px #666666;
+    border-radius: 10px;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    z-index: 100;
+    background: #ffffff;
+    visibility: hidden;
+}
+
+#cate_enum {
+    float: left;
+}
+
+#cate_enum li {
+    float: left;
+    width: 83px;
+    height: 40px;
+}
+
+#cate_enum li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font: bold 16px/40px "微软雅黑";
+    text-align: center;
+    color: #ffffff;
+}
+
+#cate_enum li a:hover {
+    text-decoration: underline;
+    background: #a40000;
+}
+
+#cate_special {
+    float: right;
+}
+
+#cate_special span {
+    text-align: center;
+    font: bold 16px/40px "微软雅黑";
+    color: #ffffff;
+}
+
+#cate_special b {
+    color: rgb(255, 244, 150);
+    font: bold 16px/40px "微软雅黑";
+    text-align: center;
+}

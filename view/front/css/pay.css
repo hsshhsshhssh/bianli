@@ -1,0 +1,21 @@
+#pay_msg {
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+#paym_table {
+    width: 300px;
+    /*text-align: center;*/
+    margin: auto;
+}
+
+#paym_table tr {
+    font: 16px/40px "微软雅黑";
+    height: 40px;
+}
+
+#paym_table th {
+    text-align: center;
+    font-size: 25px;
+}

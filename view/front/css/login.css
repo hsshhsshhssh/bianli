@@ -1,0 +1,9 @@
+
+#rempwd input[name=rempwd] {
+    margin-top: 10px
+}
+
+#rempwd>span {
+    color: #1f1f1f;
+    margin-left: 3px;
+}

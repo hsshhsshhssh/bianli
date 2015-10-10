@@ -1,0 +1,58 @@
+/****file: rechos.css 左边 推荐 历史******/
+.cl_hot, .cl_his {
+    width: 208px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    margin-top: 10px;
+}
+
+.clh_title {
+    height: 31px;
+    background: #f7f7f7;
+}
+
+.clh_title strong {
+    font: 15px/31px "微软雅黑";
+    margin-left: 15px;
+}
+
+.clh_body {
+    border-top: 1px solid #dddddd;
+}
+
+.clh_body>ul>li {
+    display: block;
+    height:159px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+
+.clh_img {
+    width: 100px;
+    height: 100px;
+    margin: 0px 54px;
+}
+
+.clh_desc {
+    margin: 5px 30px 0 25px;
+}
+
+.clh_desc>a {
+    font: 12px "微软雅黑";
+    color: #111111;
+}
+
+.clh_desc>a:hover{
+    color: #E4393C;
+    text-decoration: underline;
+}
+
+.clh_price {
+    color: #E4393C;
+    height: 30px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 2px;
+    font:bold 14px "微软雅黑";
+}

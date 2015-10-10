@@ -1,0 +1,115 @@
+/**********file:footer.css************/
+/****************************尾部*************************************/
+#footer {
+    margin: auto;
+    margin-top: 20px;
+    width: 1210px;
+    height: 500px;
+}
+
+#footer_service {
+    width: 100%;
+    height: 178px;
+}
+
+.fs_div {
+    width: 1170px;
+    height: 156px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 20px;
+}
+
+.fs_div dl {
+    float: left;
+    width: 192px;
+    height: 151px;
+}
+
+.fs_div dt {
+    width: 150px;
+    height: 40px;
+    margin: 10px 21px 0 21px;
+}
+
+.fs_div dt b{
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.fs_div dt strong {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+.fs_div dd {
+    margin-left: 71px;
+}
+
+.fs_div dd a {
+    font: 12px/20px "微软雅黑";
+    color: #000000;
+}
+
+.fs_div dd a:hover {
+    text-decoration: underline;
+    color: #E4393C;
+}
+
+#footer_about {
+    float: left;
+    width: 100%;
+    height: 104px;
+    margin-top: 30px;
+}
+
+.fa_div {
+    width: 100%;
+    height: 74px;
+}
+
+.fad_link {
+    width: 780px;
+    height: 20px;
+    margin: 0 215px;
+}
+
+.fad_link div {
+    float: left;
+    width: 60px;
+    height: 20px;
+}
+
+.fad_link div a {
+    display: block;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    font: 13px/20px "微软雅黑";
+    color: #000000;
+}
+
+.fad_link div a:hover{
+    text-decoration: underline;
+    color: #E4393C;
+}
+
+.fad_link p {
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    float: left;
+    font: 13px/20px "微软雅黑";
+}
+
+.fad_contact {
+    height: 30px;
+    width: 600px;
+    margin: 15px 605px 0 305px;
+    text-align: center;
+    font: 12px/30px "微软雅黑";
+}

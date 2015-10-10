@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>商品页</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <link rel="stylesheet" href="../view/front/css/header.css"/>
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <script type="text/javascript" src="../view/front/js/header.js"></script>
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <link rel="stylesheet" href="../view/front/css/rechos.css"/>
+    <link rel="stylesheet" href="../view/front/css/goods.css"/>
+    <script type="text/javascript" src="../view/front/js/goods.js"></script>
+    <link rel="stylesheet" href="../view/front/css/category.css"/>
+    <link rel="stylesheet" href="../view/front/css/jquery.jqzoom.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.jqzoom-core.js"></script>
+
+
+</head>
+<body>
+<!--begin for top-->
+<?php require(ROOT . 'view/front/top.html');?>
+<!--end for top-->
+<div id="container">
+    <!--begin for header-->
+    <?php require(ROOT . 'view/front/header.html');?>
+    <!--end for header-->
+
+    <!--begin for goods-->
+    <div id="cl_cate">
+        <span>当前位置：
+            <?php foreach($navlist as $v) { ?>
+            <a href="cate.php?cate_id=<?php echo $v['cate_id'];?>"><?php echo $v['cate_name'];?></a>>
+            <?php }?>
+            <a href="goods.php?goods_id=<?php echo $goodsinfo['goods_id'];?>"><?php echo $goodsinfo['goods_name']?></a>
+        </span>
+    </div>
+    <div id="gs_up">
+        <div id="gsu_picture">
+            <div id="gsup_big">
+                <a href="<?php echo '/' . substr(strstr($goodsinfo['goods_img'],'bianli'),0,strrpos(strstr($goodsinfo['goods_img'],'bianli'),'.')) . '_big.jpg';?>" class="jqzoom" rel='gal1'>
+                    <img src="<?php echo '/' . substr(strstr($goodsinfo['goods_img'],'bianli'),0,strrpos(strstr($goodsinfo['goods_img'],'bianli'),'.')) . '_mid.jpg';?>" alt="" />
+                </a>
+            </div>
+            <div id="gsup_small">
+                <img src="../view/front/images//btn_per.gif" alt="" class="gsups_prev"/>
+                <img src="../view/front/images//btn_next.gif" alt="" class="gsups_next"/>
+                <div id="gsup_small_div">
+                    <ul>
+                        <li><img src="<?php echo '/' . strstr($goodsinfo['goods_img'], 'bianli');?>" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="gsu_simdesc">
+            <div id="gsus_name"><strong><?php echo $goodsinfo['goods_name'];?></strong></div>
+            <div id="gsus_info">
+                <ul>
+                    <li class="gsusi_goodsid">商品货号：<?php echo $goodsinfo['goods_sn'];?></li>
+                    <li class="gsusi_mprice">市场价：<s>￥<?php echo $goodsinfo['goods_price']+1.5;?></s></li>
+                    <li class="gsusi_dprice">优惠价：<span>￥<span><?php echo $goodsinfo['goods_price']?></span></span></li>
+                    <li class="gsusi_evaluate">用户评价：<img src="../view/front/images//stars5.gif" alt=""/><span>已有100人评价</span></li>
+                    <li class="gsusi_brank">月销量：<span><?php echo $goodsinfo['sale_total'];?></span></li>
+                </ul>
+            </div>
+            <div id="gsus_buy">
+                <div id="gsusb_set">
+                    <span>购买数量：</span><img src="../view/front/images/goods_down1.gif" alt="" class="buy_dec" /><input type="text" name="buy_total"/><img src="../view/front/images/goods_up1.gif" alt="" class="buy_inc"/><span>商品总价</span><strong>￥<span id="total_price"><?php echo $goodsinfo['goods_price'];?></span></strong>&nbsp;&nbsp;<span>库存量</span><strong id="s_goods_total"><?php echo $goodsinfo['goods_total'];?></strong>
+                </div>
+                <div class="clr"></div>
+                <div id="gsusb_action">
+                    <div id="joincar_div">
+                        <img src="../view/front/images/bnt_cat1.gif" alt="" id="goods_buy" data="<?php echo $goods_id;?>"/>
+                    </div>
+                    <div id="collect_div">
+                        <a href=""><img src="../view/front/images/bnt_colles.gif" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gs_down">
+        <div id="gsd_rec">
+            <div class="cl_hot">
+                <div class="clh_title">
+                    <strong>本周热销</strong>
+                </div>
+                <div class="clh_body">
+                    <ul>
+                        <?php foreach($hotlist as $v) {?>
+                        <li>
+                            <img class="clh_img" src="<?php echo '/' . strstr($v['goods_img'], 'bianli');?>" alt=""/>
+                            <p class="clh_desc"><a href="goods.php?goods_id=<?php echo $v['goods_id']?>"><?php echo $v['goods_name'];?></a></p>
+                            <p class="clh_price">￥<?php echo $v['goods_price'];?></p>
+                        </li>
+                        <?php }?>
+                    </ul>
+                </div>
+            </div>
+            <div class="cl_his">
+                <div class="clh_title">
+                    <strong>本周新品</strong>
+                </div>
+                <div class="clh_body">
+                    <ul>
+                        <?php foreach($newlist as $v) {?>
+                        <li>
+                            <img class="clh_img" src="<?php echo '/' . strstr($v['goods_img'], 'bianli');?>" alt=""/>
+                            <p class="clh_desc"><a href="goods.php?goods_id=<?php echo $v['goods_id']?>"><?php echo $v['goods_name'];?></a></p>
+                            <p class="clh_price">￥<?php echo $v['goods_price'];?></p>
+                        </li>
+                        <?php }?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="gsd_fulldesc">
+            <div id="gsdf_title">
+                <ul>
+                    <li>宝贝详情</li>
+                    <li>累计评论<span>100</span></li>
+                    <li>成交记录<span>100</span></li>
+                    <li>专享服务</li>
+                </ul>
+            </div>
+            <div id="gsdf_body">
+                <div id="gsdfb_desc" class="gsdfb_div">宝贝详情</div>
+                <div id="gsdfb_comment" class="gsdfb_div">累计评论</div>
+                <div id="gsdfb_deal" class="gsdfb_div">成交记录</div>
+                <div id="gsdfb_service" class="gsdfb_div">专享服务</div>
+            </div>
+        </div>
+    </div>
+
+    <!--end for goods-->
+
+    <!--begin for footer-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+    <!--end for footer-->
+</div>
+<!--end for container-->
+</body>
+</html>

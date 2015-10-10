@@ -1,0 +1,27 @@
+#fop_header {
+    height: 125px;
+    width: 1000px;
+    margin: auto;
+    /*background: #eeeeee;*/
+}
+
+#fh_logo img {
+    width: 260px;
+    height: 60px;
+    margin: 15px 0 10px 0;
+    float: left;
+}
+
+#fh_logo>ul {
+    margin-top: 20px;
+    float: right;
+}
+
+#fh_logo>ul>li {
+    float: left;
+    font: 20px/40px '微软雅黑';
+}
+
+#ls_selected {
+    background-color: #ff9999;
+}

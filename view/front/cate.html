@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>栏目页</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <link rel="stylesheet" href="../view/front/css/header.css"/>
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <script type="text/javascript" src="../view/front/js/header.js"></script>
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <link rel="stylesheet" href="../view/front/css/rechos.css"/>
+    <link rel="stylesheet" href="../view/front/css/catelog.css"/>
+    <script type="text/javascript" src="../view/front/js/catelog.js"></script>
+    <link rel="stylesheet" href="../view/front/css/category.css"/>
+
+</head>
+<body>
+<!--顶部-->
+<?php require(ROOT . 'view/front/top.html');?>
+<div id="container">
+    <!--头部-->
+    <?php require(ROOT . 'view/front/header.html');?>
+    
+    <!--begin for catelog-->
+    <!--导航条-->
+    <div id="cl_cate">
+        <span>当前位置
+            <?php foreach($navlist as $v) { ?>
+            &gt;<a href="cate.php?cate_id=<?php echo $v['cate_id'];?>"><?php echo $v['cate_name'];?></a>
+            <?php }?>
+        </span>
+    </div>
+    <div id="cl_main">
+        <div id="cl_left">
+            <div id="cl_subcate">
+                <?php foreach($cur_catelist as $v) {?>
+                <div class="clsc_item">
+                    <b></b>
+                    <strong><a href="cate.php?cate_id=<?php echo $v['cate_id'];?>"><?php echo $v['cate_name'];?></a></strong>
+                </div>
+                <?php }?>
+            </div>
+            <div class="cl_hot">
+                <div class="clh_title">
+                    <strong>本周热销</strong>
+                </div>
+                <div class="clh_body">
+                    <ul>
+                        <?php foreach($hotlist as $v) {?>
+                        <li>
+                            <img class="clh_img" src="<?php echo '/' . strstr($v['goods_img'], 'bianli');?>" alt=""/>
+                            <p class="clh_desc"><a href="goods.php?goods_id=<?php echo $v['goods_id']?>"><?php echo $v['goods_name'];?></a></p>
+                            <p class="clh_price">￥<?php echo $v['goods_price'];?></p>
+                        </li>
+                        <?php }?>
+                    </ul>
+                </div>
+            </div>
+            <div class="cl_his">
+                <div class="clh_title">
+                    <strong>本周新品</strong>
+                </div>
+                <div class="clh_body">
+                    <ul>
+                        <?php foreach($newlist as $v) {?>
+                        <li>
+                            <img class="clh_img" src="<?php echo '/' . strstr($v['goods_img'], 'bianli');?>" alt=""/>
+                            <p class="clh_desc"><a href="goods.php?goods_id=<?php echo $v['goods_id']?>"><?php echo $v['goods_name'];?></a></p>
+                            <p class="clh_price">￥<?php echo $v['goods_price'];?></p>
+                        </li>
+                        <?php }?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="cl_right">
+            <div id="clr_select">
+                <div class="clrs_title"><span>XXXX-商品筛选</span><a href="#">重置筛选条件</a></div>
+                <div class="clrs_body">
+                    <div class="clrs_item">
+                        <div class="clrs_item_div">
+                            <strong>品牌：</strong><a href="#">品牌1</a>&nbsp;<a href="#">品牌1</a>&nbsp;<a href="#">品牌1</a>&nbsp;<a href="#">品牌1</a>&nbsp;
+                        </div>
+                    </div>
+                    <div class="clrs_item">
+                        <div class="clrs_item_div">
+                            <strong>价格：</strong><a href="#">价格1</a>&nbsp;<a href="#">价格1</a>&nbsp;<a href="#">价格1</a>&nbsp;<a href="#">价格1</a>&nbsp;
+                        </div>
+                    </div>
+                    <input type="button" value="确定"/>
+                </div>
+            </div>
+            <div id="clr_good">
+
+                <div class="clrg_title">
+                    <dl class="clrg_order">
+                        <dt>排序:</dt>
+                        <dd><a href="#">综合</a></dd>
+                        <dd><a href="#">价格</a></dd>
+                        <dd><a href="#">销量</a></dd>
+                        <dd><a href="#">上架</a></dd>
+                    </dl>
+                    <div class="clrg_result">
+                        <div class="cr_sum"><span>共有<?php echo $list_total;?>个商品&nbsp;&nbsp;&nbsp;</span></div>
+                        <div class="cr_page"><?php echo $html;?></div>
+                        <!--<div class="cr_prev_next"><a href="#">上一页</a></div>-->
+                        <!--<div class="cr_prev_next"><a href="#">下一页</a></div>-->
+                    </div>
+                </div>
+                <div class="clrg_body">
+                    <ul>
+                        <?php foreach($goodslist as $v) {?>
+                        <li>
+                            <div class="clrg_body_div">
+                                <div class="clrgbd_img">
+                                    <img src="<?php echo '/' . strstr($v['goods_img'], 'bianli');?>" alt=""/>
+                                </div>
+                                <div class="clrgbd_desc">
+                                    <a href="goods.php?goods_id=<?php echo $v['goods_id'];?>"><?php echo $v['goods_name'];?></a>
+                                </div>
+                                <div class="clrgbd_price">
+                                    <span>￥<?php echo $v['goods_price'];?></span>
+                                </div>
+                                <div class="clrgbd_action">
+                                    <button class="joincar">加入购物车</button>
+                                    <button class="collect">收藏</button>
+                                </div>
+                            </div>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+                <div class="clrg_title" id="clrg_title_last">
+                    <dl class="clrg_order">
+                        <dt>排序:</dt>
+                        <dd><a href="#">综合</a></dd>
+                        <dd><a href="#">价格</a></dd>
+                        <dd><a href="#">销量</a></dd>
+                        <dd><a href="#">上架</a></dd>
+                    </dl>
+                    <div class="clrg_result">
+                        <div class="cr_sum"><span>共有<?php echo $list_total;?>个商品&nbsp;&nbsp;&nbsp;</span></div>
+                        <div class="cr_page"><?php echo $html;?></div>
+                        <!--<div class="cr_prev_next"><a href="#">上一页</a></div>-->
+                        <!--<div class="cr_prev_next"><a href="#">下一页</a></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end for catelog-->
+    
+    <!--尾部-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+</div>  <!--end for container -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+/***file: register.css***/
+#user_register {
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin-left: 400px;
+}
+
+#user_register tr {
+    height: 40px;
+}
+
+#user_register th {
+    text-align: center;
+    font-size: 18px;
+}
+
+#user_register .td_title {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#user_register td {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#user_register .td_button {
+    text-align: center;
+}
+
+#user_register span {
+    color: #c0c0c0;
+    margin-left: 10px;
+}

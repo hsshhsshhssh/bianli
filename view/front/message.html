@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>消息提示</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <link rel="stylesheet" href="../view/front/css/header.css"/>
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <script type="text/javascript" src="../view/front/js/header.js"></script>
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#cate_all_div").hide(0); //会消除影响
+        });
+    </script>
+
+</head>
+<body>
+<!--引入顶部-->
+<?php require(ROOT . 'view/front/top.html');?>
+
+<div id="container">
+    <!--引入头部-->
+    <?php require(ROOT . 'view/front/header.html');?>
+
+    <div style="font-size:20px;float:left;margin-left:0">此功能暂未开放</div>
+
+    <!--引入尾部-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+
+</div>
+<!--end for container-->
+</body>
+</html>

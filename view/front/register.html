@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>用户注册</title>
+    <link rel="stylesheet" href="../view/front/css/reset.css"/>
+    <script type="text/javascript" src="../view/front/js/jquery.js"></script>
+    <script type="text/javascript" src="../view/front/js/tools.js"></script>
+    <link rel="stylesheet" href="../view/front/css/top.css"/>
+    <link rel="stylesheet" href="../view/front/css/header.css"/>
+    <link rel="stylesheet" href="../view/front/css/footer.css"/>
+    <script type="text/javascript" src="../view/front/js/top.js"></script>
+    <script type="text/javascript" src="../view/front/js/header.js"></script>
+    <script type="text/javascript" src="../view/front/js/footer.js"></script>
+
+    <script type="text/javascript" src="../view/front/js/md5.js"></script>
+    <link rel="stylesheet" href="../view/front/css/msg_table.css"/>
+    <script type="text/javascript" src="../view/front/js/register.js"></script>
+
+</head>
+<body>
+<!--引入顶部-->
+<?php require(ROOT . 'view/front/top.html');?>
+
+<div id="container">
+    <!--引入头部-->
+    <?php require(ROOT . 'view/front/header.html');?>
+
+    <!--用户注册-->
+    <div id="user_register" class="msg_table">
+        <table>
+            <tr>
+                <th colspan="3">用户注册</th>
+            </tr>
+            <tr>
+                <td class="td_title">用户名</td>
+                <td colspan="2"><input type="text" name="username"/><span>必填</span></td>
+            </tr>
+            <tr>
+                <td class="td_title">密码</td>
+                <td colspan="2"><input type="password" name="password"/><span>至少6位</span></td>
+            </tr>
+            <tr>
+                <td class="td_title">确认密码</td>
+                <td colspan="2"><input type="password" name="confirmpwd"/><span></span></td>
+            </tr>
+            <tr>
+                <td class="td_title">邮箱</td>
+                <td colspan="2"><input type="text" name="email"/><span>用于找回密码</span></td>
+            </tr>
+            <tr>
+                <td class="td_title">验证码</td>
+                <td><input type="text" name="verify"/><span></span></td>
+                <td><img src="../tools/verifycode.php" alt="" id="verify"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="td_button">
+                    <button>提交</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--引入尾部-->
+    <?php require(ROOT . 'view/front/footer.html');?>
+
+</div>
+<!--end for container-->
+</body>
+</html>
